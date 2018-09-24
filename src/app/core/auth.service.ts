@@ -40,6 +40,7 @@ export class AuthService {
   private oAuthLogin(provider) {
     return this.afAuth.auth.signInWithPopup(provider)
       .then((credential) => {
+        console.log(credential);
         this.updateUserData(credential.user)
       })
   }

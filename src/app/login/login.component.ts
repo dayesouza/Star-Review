@@ -1,3 +1,4 @@
+import { AuthService } from './../core/auth.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  login_pass_available: Boolean = false;
+
+  constructor(private userService: AuthService) { }
 
   ngOnInit() {
+  }
+
+  googleLogin(){
+    this.userService.googleLogin().then(a=>{
+      console.log(a)
+    }
+    );
   }
 
 }

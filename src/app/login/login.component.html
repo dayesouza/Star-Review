@@ -1,3 +1,42 @@
-<alert type="success">
-  <strong>Well done!</strong> You successfully read this important alert message.
-</alert>
+<div class="container">
+  <div class="row">
+    <form class="form-signin">
+      <h3 class="heading-desc">
+        Login to Star Review
+      </h3>
+      <div class="social-box">
+        <div class="row">
+          <div class="col-md-12">
+            <a href="#" class="btn btn-primary btn-block" (click)="googleLogin()">
+              <i class="icon-google"></i>    Login with Google
+            </a>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="login_pass_available">
+
+        <div class="main">
+
+          <input type="text" class="form-control" placeholder="Email" autofocus>
+          <input type="password" class="form-control" placeholder="Password">
+          <span class="clearfix"></span>
+        </div>
+        <div class="login-footer">
+          <div class="row">
+            <!-- <div class="col-xs-6 col-md-6">
+            <div class="left-section">
+              <a href="">Forgot your password?</a>
+              <a href="">Sign up now</a>
+            </div>
+          </div> -->
+            <div class="col-xs-12 col-md-12 ">
+              <button type="submit" class="btn btn-success float-right">Login</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </form>
+  </div>
+</div>
