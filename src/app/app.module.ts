@@ -1,3 +1,4 @@
+import { BoostrapModule } from './bootstrap/bootstrap.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
@@ -23,7 +24,8 @@ import { UserComponent } from './user/user.component';
     BrowserModule,
     CoreRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
-    CoreModule
+    CoreModule,
+    BoostrapModule
   ],
   providers: [],
   bootstrap: [AppComponent]

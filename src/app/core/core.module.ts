@@ -8,7 +8,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 @NgModule({
   imports: [
     AngularFireAuthModule,
-    AngularFirestoreModule
+    AngularFirestoreModule    
   ],
   providers: [AuthService, AuthGuard]
 })
